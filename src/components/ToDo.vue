@@ -5,7 +5,7 @@
       <h1 class="ToDo-Header">Vue To Do</h1>
       <div class="ToDo-Container">
         <div class="ToDo-Content">
-          <ToDoItem v-for="todo in list" :todo="todo" @delete="onDeleteItem" :key="todo.id" />
+          <ToDoItem v-for="item in list" :item="item" @delete="onDeleteItem" :key="item.id" />
         </div>
         <input type="text" v-model="todo" v-on:keyup.enter="createNewToDoItem" />
         <div class="ToDo-Add" @click="createNewToDoItem()">+</div>

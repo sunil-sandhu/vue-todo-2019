@@ -1,17 +1,17 @@
 <template>
   <div class="ToDoItem">
-    <p class="ToDoItem-Text">{{todo.text}}</p>
-    <div class="ToDoItem-Delete" @click="deleteItem(todo)">-</div>
+    <p class="ToDoItem-Text">{{item.text}}</p>
+    <div class="ToDoItem-Delete" @click="deleteItem(item)">-</div>
   </div>
 </template>
 
 <script>
 export default {
   name: "to-do-item",
-  props: ["todo"],
+  props: ["item"],
   methods: {
-    deleteItem(todo) {
-      this.$emit("delete", todo);
+    deleteItem(item) {
+      this.$emit("delete", item);
     }
   }
 };
