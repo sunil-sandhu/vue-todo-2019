@@ -39,12 +39,12 @@ export default {
         return;
       }
 
-      const newId = Math.max.apply(null, this.list.map(t => t.id)) + 1;
+      const newId = this.list.length ? Math.max.apply(null, this.list.map(t => t.id)) + 1 : 1;
       this.list.push({ id: newId, text: this.todo });
       this.todo = "";
     },
-    onDeleteItem(todo) {
-      this.list = this.list.filter(item => item !== todo);
+    onDeleteItem(id) {
+      this.list = this.list.filter(item => item.id !== id);
     }
   }
 };
