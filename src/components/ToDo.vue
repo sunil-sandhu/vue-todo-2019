@@ -8,7 +8,7 @@
           <ToDoItem v-for="item in list" :item="item" @delete="onDeleteItem" :key="item.id" />
         </div>
         <input type="text" v-model="todo" v-on:keyup.enter="createNewToDoItem" />
-        <div class="ToDo-Add" @click="createNewToDoItem()">+</div>
+        <button class="ToDo-Add" @click="createNewToDoItem()">+</button>
       </div>
     </div>
   </div>
@@ -39,7 +39,9 @@ export default {
         return;
       }
 
-      const newId = this.list.length ? Math.max.apply(null, this.list.map(t => t.id)) + 1 : 1;
+      const newId = this.list.length
+        ? Math.max.apply(null, this.list.map(t => t.id)) + 1
+        : 1;
       this.list.push({ id: newId, text: this.todo });
       this.todo = "";
     },
@@ -91,19 +93,15 @@ body {
 }
 
 .ToDo-Add {
-  color: white;
-  font-size: 2em;
-  width: 0.5em;
-  height: 0.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
+  margin: 20px auto 0;
+  display: block;
+  padding: 4px 12px;
   cursor: pointer;
   background: #73ff73;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #47a947;
-  margin: 20px auto 0;
+  color: white;
+  font-size: 28px;
 }
 
 .ToDo-Add:hover {

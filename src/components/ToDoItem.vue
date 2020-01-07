@@ -1,8 +1,8 @@
 <template>
   <div class="ToDoItem">
     <p class="ToDoItem-Text">{{item.text}}</p>
-    <div class="ToDoItem-Delete" 
-         @click="deleteItem(item.id)">-</div>
+    <button class="ToDoItem-Delete" 
+         @click="deleteItem(item.id)">-</button>
   </div>
 </template>
 
