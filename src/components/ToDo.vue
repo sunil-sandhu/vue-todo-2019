@@ -106,8 +106,6 @@ body {
 
 .ToDo-Add:hover {
   box-shadow: none;
-  margin-top: 21px;
-  margin-left: calc(auto + 1px);
 }
 
 .ToDo-Container {
