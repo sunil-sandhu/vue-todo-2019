@@ -8,7 +8,7 @@
           <ToDoItem v-for="item in list" :item="item" @delete="onDeleteItem" :key="item.id" />
         </div>
         <input type="text" v-model="todo" v-on:keyup.enter="createNewToDoItem" />
-        <button class="ToDo-Add" @click="createNewToDoItem()">+</button>
+        <button class="ToDo-Add" @click="createNewToDoItem">+</button>
       </div>
     </div>
   </div>
