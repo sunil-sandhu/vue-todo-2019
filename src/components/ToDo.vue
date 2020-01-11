@@ -19,7 +19,7 @@ import ToDoItem from "./ToDoItem.vue";
 import Logo from "../assets/logo.png";
 
 export default {
-  name: "to-do",
+  name: "ToDo",
   components: {
     ToDoItem
   },
